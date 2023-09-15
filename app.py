@@ -1,7 +1,6 @@
 
 import streamlit as st
 import openai
-import secret_keys
 
 # Streamlit Community Cloud の Secrets から OpenAI API Key を取得する
 openai.api_key = st.secrets.OpenAIAPI.openai_api_key
