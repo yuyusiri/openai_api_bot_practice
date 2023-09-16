@@ -36,8 +36,9 @@ def communicate():
   st.session_state["user_input"] = "" #入力欄を消去
 
 # UI
-st.title("チャットキャリア相談")
-st.write("ChatGPT APIを使ったチャットボットです。")
+st.title("勉強をサポートするねこ")
+st.image("logo.png")
+st.write("勉強について知りたいことは何ですか？")
 
 user_input = st.text_input(
   "キャリアについて相談したいことを入力してください。",
@@ -51,6 +52,6 @@ if st.session_state["messages"]:
   for message in reversed(messages[1:]): # 直近のメッセージを上に
     speaker = "🙂" # 相談者
     if message["role"]=="assistant":
-      speaker="😊" # チャットボット
+      speaker="😺" # チャットボット
 
     st.write(speaker + ": " + message["content"])
