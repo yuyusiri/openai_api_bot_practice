@@ -10,10 +10,6 @@ if "messages" not in st.session_state:
   st.session_state["messages"] = [
     {
       "role": "system",
-      # "content": "あなたは優秀なキャリア支援AIです。"
-      # streamlitのsettingsに設定することが可能
-      # [AppSettings]
-      # chatbot_setting = "あなたは優秀なキャリア支援AIです。"
       "content": st.secrets.AppSettings.chatbot_setting
     }
   ]
