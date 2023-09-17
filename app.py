@@ -25,8 +25,8 @@ def communicate():
   messages.append(user_message)
 
   response = openai.ChatCompletion.create(
-    # model="gpt-3.5-turbo",
-    model="gpt-4.0",
+    model="gpt-3.5-turbo",
+    # model="gpt-4.0",
     messages=messages,
     temperature=1.0 # ★★★
   )
