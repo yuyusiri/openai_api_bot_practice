@@ -38,10 +38,10 @@ def communicate():
 # UI
 st.title("勉強をサポートするねこ")
 st.image("logo.png")
-st.write("勉強について知りたいことは何ですか？")
+# st.write("勉強について知りたいことは何ですか？")
 
 user_input = st.text_input(
-  "キャリアについて相談したいことを入力してください。",
+  "勉強について知りたいことを入力してください",
   key="user_input",
   on_change=communicate
 )
