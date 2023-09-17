@@ -25,7 +25,8 @@ def communicate():
   messages.append(user_message)
 
   response = openai.ChatCompletion.create(
-    model="gpt-3.5-turbo",
+    # model="gpt-3.5-turbo",
+    model="gpt-4.0",
     messages=messages,
     temperature=1.0 # ★★★
   )
@@ -38,7 +39,7 @@ def communicate():
 # UI
 st.title("勉強をサポートするねこ")
 st.image("logo.png")
-# st.write("勉強について知りたいことは何ですか？")
+# st.write("勉強で分からないことについて答えたり練習問題を出すことができます。")
 
 user_input = st.text_input(
   "勉強について知りたいことを入力してください",
