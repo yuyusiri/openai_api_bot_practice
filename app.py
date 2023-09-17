@@ -42,7 +42,7 @@ st.image("logo.png")
 # st.write("勉強で分からないことについて答えたり練習問題を出すことができます。")
 
 user_input = st.text_input(
-  "勉強について知りたいことを入力してください",
+  "勉強で分からないことについて答えたり練習問題を出すことができます。",
   key="user_input",
   on_change=communicate
 )
