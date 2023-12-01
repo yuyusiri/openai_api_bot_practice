@@ -1,9 +1,11 @@
 
 import streamlit as st
-import openai
+from openai import OpenAI
 
 # Streamlit Community Cloud の Secrets から OpenAI API Key を取得する
-openai.api_key = st.secrets.OpenAIAPI.openai_api_key
+client = OpenAI(
+  api_key = st.secrets.OpenAIAPI.openai_api_key,
+)
 
 # メッセージのやり取りを保存する
 if "messages" not in st.session_state:
@@ -24,7 +26,7 @@ def communicate():
   }
   messages.append(user_message)
 
-  response = openai.ChatCompletion.create(
+  response = client.chat.completion.create(
     # model="gpt-3.5-turbo",
     model="gpt-4",
     messages=messages,
