@@ -57,7 +57,7 @@ if st.session_state["messages"]:
     speaker = "🙂" # 相談者
     st.write(message)
     # if message["role"]=="assistant":
-    if message.role=="assistant"
+    if message.role=="assistant":
       speaker="😺" # チャットボット
 
     # st.write(speaker + ": " + message["content"])
