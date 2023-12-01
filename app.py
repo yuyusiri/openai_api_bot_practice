@@ -52,10 +52,9 @@ user_input = st.text_input(
 
 if st.session_state["messages"]:
   messages = st.session_state["messages"]
-  st.write(messages)
   
   for message in reversed(messages[1:]): # 直近のメッセージを上に
-
+    st.write(message.choices[1].content)
     speaker = "🙂" # 相談者
     # if message["role"]=="assistant":
     if ChatCompletionMessage["role"]=="assistant":
