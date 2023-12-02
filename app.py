@@ -54,11 +54,11 @@ if st.session_state["messages"]:
   messages = st.session_state["messages"]
   
   for message in reversed(messages[1:]): # 直近のメッセージを上に
-    st.write(dict(message).get("role"))
+    
     speaker = "🙂" # 相談者
     # if message["role"]=="assistant":
-    if message.message.role=="assistant":
+    if dict(message).get("role")=="assistant":
       speaker="😺" # チャットボット
 
     # st.write(speaker + ": " + message["content"])
-    st.write(speaker + ": " + message.content)
+    st.write(speaker + ": " + dict(message).get("content"))
